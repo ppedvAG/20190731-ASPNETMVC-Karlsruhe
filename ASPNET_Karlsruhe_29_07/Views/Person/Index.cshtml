@@ -1,0 +1,21 @@
+﻿@{
+}
+@model IEnumerable<ASPNET_Karlsruhe_29_07.Models.Todo.Person>
+
+<h1>@ViewData["Title"]</h1>
+<table class="table table-bordered">
+    <tr>
+        <th>Name</th>
+        <th>Geburtstag</th>
+        <th>Aktion</th>
+    </tr>
+@foreach (var person in Model)
+{
+    <tr>
+        <td>@person.Name</td>
+        <td>@person.Birthday</td>
+        <td><a asp-action="Delete" asp-route-id="@person.Id">Löschen</a></td>
+    </tr>
+
+}
+</table>

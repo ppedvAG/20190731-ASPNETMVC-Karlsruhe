@@ -1,0 +1,16 @@
+﻿@{
+}
+@model ASPNET_Karlsruhe_29_07.Models.Todo.Person
+
+<h1>@ViewData["Title"]</h1>
+<div>
+    Die Person löschen?
+</div>
+<div>
+    @Model.Id<br />
+    @Model.Name<br />
+    @Model.Birthday
+</div>
+<form method="post">
+    <button type="submit">Löschen</button>
+</form>
